@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+
 import styled from 'styled-components'
 
-export default class InputName extends Component {
+export default class Overview extends Component {
   render() {
     return <div />
   }

@@ -2,26 +2,30 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { text, number } from '@storybook/addon-knobs'
+import { text, date } from '@storybook/addon-knobs'
 
-import InputFinishdate from '../components/InputFinishdate'
-import InputChallenge from '../components/InputChallenge'
-import AddButton from '../components/AddButton'
+import InputFinishdate from '../components/Setups/InputFinishdate'
+import InputChallenge from '../components/Setups/InputChallenge'
+import AddButton from '../components/Setups/AddButton'
 
-// storiesOf('InputFinishdate', module).add('default', () => (
-//   <React.Fragment>
-//     <Input>{number('Label', 'Hello world')}</Input>
-//   </React.Fragment>
-// ))
+const defaultDate = new Date()
 
-// storiesOf('AddButton', module).add('default', () => (
-//   <React.Fragment>
-//     <Button>{text('Label', 'Hello world')}</Button>
-//   </React.Fragment>
-// ))
+storiesOf('InputChallenge', module).add('default', () => (
+  <React.Fragment>
+    <InputChallenge onEnter={action('onEnter')}>
+      {text('Label', 'Hello world')}
+    </InputChallenge>
+  </React.Fragment>
+))
 
-// storiesOf('InputChallenge', module).add('default', () => (
-//   <React.Fragment>
-//     <Input>{text('Label', 'Hello world')}</Input>
-//   </React.Fragment>
-// ))
+storiesOf('InputFinishdate', module).add('default', () => (
+  <React.Fragment>
+    <InputFinishdate>{date('Date', defaultDate)}</InputFinishdate>
+  </React.Fragment>
+))
+
+storiesOf('AddButton', module).add('default', () => (
+  <React.Fragment>
+    <AddButton>{text('Label', 'Hello world')}</AddButton>
+  </React.Fragment>
+))
