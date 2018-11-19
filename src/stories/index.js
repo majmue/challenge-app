@@ -4,9 +4,9 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { text, date } from '@storybook/addon-knobs'
 
-import InputFinishdate from '../components/Setups/InputFinishdate'
-import InputChallenge from '../components/Setups/InputChallenge'
-import AddButton from '../components/Setups/AddButton'
+import InputFinishdate from '../components/Setup/InputFinishdate'
+import InputChallenge from '../components/Setup/InputChallenge'
+import AddButton from '../components/Setup/AddButton'
 
 const defaultDate = new Date()
 

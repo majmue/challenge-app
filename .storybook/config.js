@@ -14,7 +14,7 @@ addDecorator(
      * name to display in the top left corner
      * @type {String}
      */
-    name: 'Challenge App',
+    name: 'Challenge App: Me.NOW',
     /**
      * URL for name in top left corner to link to
      * @type {String}
@@ -86,19 +86,19 @@ addDecorator(
   })
 )
 
-// addDecorator(story => (
-//   <StyleBox
-//     p="20px 25%"
-//     m="0 0 20px 0"
-//     bg="repeating-linear-gradient(-45deg, #efefef, #efefef 1px, white 1px, white 8px)"
-//   >
-//     {story()}
-//     <GlobalStyle />
-//   </StyleBox>
-// ))
+addDecorator(story => (
+  <StyleBox
+    p="20px 25%"
+    m="0 0 20px 0"
+    bg="repeating-linear-gradient(-45deg, #efefef, #efefef 1px, white 1px, white 8px)"
+  >
+    {story()}
+    <GlobalStyle />
+  </StyleBox>
+))
 
-// function loadStories() {
-//   require('../src/stories')
-// }
+function loadStories() {
+  require('../src/stories')
+}
 
-// configure(loadStories, module)
+configure(loadStories, module)

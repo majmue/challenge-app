@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-export default class ContainerCollector extends Component {
+const StyledContainerInputs = styled.div``
+
+export default class ContainerInputs extends Component {
   render() {
-    return <div />
+    return <StyledContainerInputs />
   }
 }
