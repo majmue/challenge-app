@@ -4,7 +4,7 @@ import { withOptions } from '@storybook/addon-options'
 
 import React from 'react'
 import GlobalStyle from '../src/components/GlobalStyle'
-import StyleBox from '../src/stories/StyleBox'
+//import StyleBox from '../src/stories/StyleBox'
 
 addDecorator(withKnobs)
 
@@ -82,7 +82,7 @@ addDecorator(
      * enable/disable shortcuts
      * @type {Boolean}
      */
-    enableShortcuts: true, // true by default
+    enableShortcuts: true // true by default
   })
 )
 
