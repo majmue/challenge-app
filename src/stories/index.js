@@ -8,19 +8,23 @@ import InputFinishdate from '../components/Setup/InputFinishdate'
 import InputChallenge from '../components/Setup/InputChallenge'
 import AddButton from '../components/Setup/AddButton'
 
-const defaultDate = new Date()
+function dateKnob(name, defaultValue) {
+  const stringTimestamp = date(name, defaultValue)
+  return new Date(stringTimestamp)
+}
 
 storiesOf('InputChallenge', module).add('default', () => (
   <React.Fragment>
-    <InputChallenge onEnter={action('onEnter')}>
-      {text('Label', 'Hello world')}
-    </InputChallenge>
+    <InputChallenge
+      onSubmit={action('onEnter')}
+      placeholder={text('Placeholder', 'Add your challenge')}
+    />
   </React.Fragment>
 ))
 
 storiesOf('InputFinishdate', module).add('default', () => (
   <React.Fragment>
-    <InputFinishdate>{date('Date', defaultDate)}</InputFinishdate>
+    <InputFinishdate onChange={dateKnob('Label', new Date('2018.11.20'))} />
   </React.Fragment>
 ))
 

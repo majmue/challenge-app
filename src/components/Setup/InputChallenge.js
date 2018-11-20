@@ -14,7 +14,10 @@ export default class InputChallenge extends Component {
   render() {
     return (
       <React.Fragment>
-        <input onKeyUp={this.handleKeyUp} placeholder="Add your challenge" />
+        <input
+          onSubmit={this.handleKeyUp}
+          placeholder={this.props.placeholder}
+        />
       </React.Fragment>
     )
   }
