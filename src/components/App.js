@@ -4,8 +4,18 @@ import OverviewScreen from './Overview/OverviewScreen'
 
 import styled from 'styled-components'
 
+const Wrapper = styled.main`
+  height: 100vh;
+  background-color: #6699ff;
+`
+
 export default class App extends Component {
   render() {
-    return <div>Hello World</div>
+    return (
+      <Wrapper>
+        <SetupScreen />
+        <OverviewScreen />
+      </Wrapper>
+    )
   }
 }

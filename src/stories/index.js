@@ -7,6 +7,7 @@ import { text, date } from '@storybook/addon-knobs'
 import InputFinishdate from '../components/Setup/InputFinishdate'
 import InputChallenge from '../components/Setup/InputChallenge'
 import AddButton from '../components/Setup/AddButton'
+import ContainerInputs from '../components/Overview/ContainerInputs'
 
 function dateKnob(name, defaultValue) {
   const stringTimestamp = date(name, defaultValue)
@@ -14,22 +15,23 @@ function dateKnob(name, defaultValue) {
 }
 
 storiesOf('InputChallenge', module).add('default', () => (
-  <React.Fragment>
-    <InputChallenge
-      onSubmit={action('onEnter')}
-      placeholder={text('Placeholder', 'Add your challenge')}
-    />
-  </React.Fragment>
+  <InputChallenge
+    onSubmit={action('onEnter')}
+    placeholder={text('Placeholder', 'Add your challenge...')}
+  />
 ))
 
 storiesOf('InputFinishdate', module).add('default', () => (
-  <React.Fragment>
-    <InputFinishdate onChange={dateKnob('Label', new Date('2018.11.20'))} />
-  </React.Fragment>
+  <InputFinishdate onChange={dateKnob('Label', new Date('2018.11.20'))} />
 ))
 
 storiesOf('AddButton', module).add('default', () => (
-  <React.Fragment>
-    <AddButton>{text('Label', 'Hello world')}</AddButton>
-  </React.Fragment>
+  <AddButton>{text('Label', 'Hello world')}</AddButton>
+))
+
+storiesOf('ContainerInputs', module).add('default', () => (
+  <ContainerInputs
+    challengeName={text('Challenge-Name', 'Beispielchallenge')}
+    challengeDate={dateKnob('Challenge-Date', new Date('2018.11.20'))}
+  />
 ))
