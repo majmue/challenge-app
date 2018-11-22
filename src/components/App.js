@@ -11,13 +11,9 @@ const Wrapper = styled.main`
 `
 
 export default class App extends Component {
-  handleChange = event => {
-    const input = event.target
-    this.props.onChange(input.value)
-    input.value = ''
-    input.focus()
+  state = {
+    date: ''
   }
-
   render() {
     return (
       <Router>
@@ -27,14 +23,19 @@ export default class App extends Component {
             path="/"
             render={() => (
               <SetupScreen
-                onChange={inputValue => this.handleChange(inputValue)}
+                changeDate={inputValue =>
+                  this.setState({
+                    ...this.state,
+                    date: inputValue
+                  })
+                }
               />
             )}
           />
           <Route
             exact
             path="/overviewscreen"
-            render={() => <OverviewScreen />}
+            render={() => <OverviewScreen dateValue={this.state.date} />}
           />
           <nav>
             <NavLink exact activeClassName="active" to="/">

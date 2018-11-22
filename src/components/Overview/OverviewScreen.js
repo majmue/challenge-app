@@ -9,19 +9,11 @@ const StyleOverviewScreen = styled.section`
 `
 
 export default class Overview extends Component {
-  handleChange = event => {
-    const input = event.target
-    this.props.onChange(input.value)
-    input.value = ''
-    input.focus()
-  }
-
   render() {
+    const { dateValue } = this.props
     return (
       <StyleOverviewScreen>
-        <ContainerInputs
-          onChange={inputValue => this.handleChange(inputValue)}
-        />
+        <ContainerInputs challengeDate={dateValue} />
       </StyleOverviewScreen>
     )
   }

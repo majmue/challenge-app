@@ -25,7 +25,7 @@ export default class ContainerInputs extends Component {
     return (
       <StyleContainer>
         <div>{challengeName}</div>
-        <div>{challengeDate.toLocaleDateString('de')}</div>
+        <div>{challengeDate}</div>
       </StyleContainer>
     )
   }

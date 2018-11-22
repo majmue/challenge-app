@@ -2,13 +2,10 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const StyleInputChallenge = styled.input`
-  display: grid;
   height: 30px;
   width: 200px;
   padding: 5px;
   border: 1px solid #e2083f;
-  grid-column: 2 / span 3;
-  grid-row: 6 / span 1;
 `
 
 export default class InputChallenge extends Component {
@@ -23,12 +20,10 @@ export default class InputChallenge extends Component {
 
   render() {
     return (
-      <StyleInputChallenge>
-        <InputChallenge
-          onSubmit={() => this.handleKeyUp}
-          placeholder={this.props.placeholder}
-        />
-      </StyleInputChallenge>
+      <StyleInputChallenge
+        onEnter={event => this.props.handleKeyUp(event)}
+        placeholder="Type in..."
+      />
     )
   }
 }
