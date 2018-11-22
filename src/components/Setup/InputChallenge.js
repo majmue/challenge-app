@@ -11,18 +11,17 @@ const StyleInputChallenge = styled.input`
 export default class InputChallenge extends Component {
   handleKeyUp = event => {
     const input = event.target
-    if (event.key === 'Enter') {
-      this.props.onEnter(input.value)
-      input.value = ''
-      input.focus()
-    }
+    this.props.onChange(input.value)
+    // input.value = ''
+    // input.focus()
   }
 
   render() {
     return (
       <StyleInputChallenge
-        onEnter={event => this.props.handleKeyUp(event)}
-        placeholder="Type in..."
+        type="text"
+        onChange={event => this.handleKeyUp(event)}
+        placeholder="Add your Challenge..."
       />
     )
   }
