@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-const Container = styled.div`
+const StyleContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -23,10 +23,10 @@ export default class ContainerInputs extends Component {
   render() {
     const { challengeName, challengeDate } = this.props
     return (
-      <Container>
+      <StyleContainer>
         <div>{challengeName}</div>
         <div>{challengeDate.toLocaleDateString('de')}</div>
-      </Container>
+      </StyleContainer>
     )
   }
 }
