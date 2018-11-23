@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const StyleContainer = styled.div`
@@ -21,10 +22,11 @@ const StyleContainer = styled.div`
 
 export default class ContainerInputs extends Component {
   render() {
-    const { challengeDate } = this.props
+    const { challengeDate, challengeName } = this.props
     return (
       <StyleContainer>
         <div>{challengeDate}</div>
+        <div>{challengeName}</div>
       </StyleContainer>
     )
   }

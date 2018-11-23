@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const StyleInputDate = styled.input`
@@ -9,6 +10,10 @@ const StyleInputDate = styled.input`
 `
 
 export default class InputFinishdate extends Component {
+  static propTypes = {
+    onChange: PropTypes.func.isRequired
+  }
+
   handleChange = event => {
     const input = event.target
     this.props.onChange(input.value)

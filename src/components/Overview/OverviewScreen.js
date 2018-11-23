@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import ContainerInputs from './ContainerInputs'
 
 import styled from 'styled-components'
@@ -8,12 +9,12 @@ const StyleOverviewScreen = styled.section`
   background: white;
 `
 
-export default class Overview extends Component {
+export default class OverviewScreen extends Component {
   render() {
-    const { dateValue } = this.props
+    const { dateValue, dateName } = this.props
     return (
       <StyleOverviewScreen>
-        <ContainerInputs challengeDate={dateValue} />
+        <ContainerInputs challengeDate={dateValue} challengeName={dateName} />
       </StyleOverviewScreen>
     )
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { ButtonLink } from 'react-router-dom'
 import InputChallenge from './InputChallenge'
 import InputFinishdate from './InputFinishdate'
 import AddButton from './AddButton'
@@ -23,13 +23,13 @@ const Logo = styled.img`
 
 export default class SetupScreen extends Component {
   render() {
-    const { changeDate } = this.props
+    const { changeDate, changeName } = this.props
     return (
       <StyleSetupScreen>
         <Logo className="logo" src={logo} alt="Logo" />
-        <InputChallenge />
+        <InputChallenge onEnter={inputValue => changeName(inputValue)} />
         <InputFinishdate onChange={inputValue => changeDate(inputValue)} />
-        <AddButton />
+        {/* <ButtonLink to="/overviewscreen">jhgf</ButtonLink> */}
       </StyleSetupScreen>
     )
   }

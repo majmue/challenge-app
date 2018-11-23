@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const StyleInputChallenge = styled.input`
@@ -9,6 +10,10 @@ const StyleInputChallenge = styled.input`
 `
 
 export default class InputChallenge extends Component {
+  static propTypes = {
+    onEnter: PropTypes.func.isRequired
+  }
+
   handleKeyUp = event => {
     const input = event.target
     if (event.key === 'Enter') {
@@ -21,8 +26,8 @@ export default class InputChallenge extends Component {
   render() {
     return (
       <StyleInputChallenge
-        onEnter={event => this.props.handleKeyUp(event)}
-        placeholder="Type in..."
+        onKeyUp={this.handleKeyUp}
+        placeholder="Add your challenge..."
       />
     )
   }

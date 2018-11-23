@@ -12,7 +12,8 @@ const Wrapper = styled.main`
 
 export default class App extends Component {
   state = {
-    date: ''
+    date: '',
+    nameEl: ''
   }
   render() {
     return (
@@ -28,20 +29,30 @@ export default class App extends Component {
                     date: inputValue
                   })
                 }
+                changeName={inputNameValue =>
+                  this.setState({
+                    nameEl: inputNameValue
+                  })
+                }
               />
             )}
           />
           <Route
             exact
             path="/overviewscreen"
-            render={() => <OverviewScreen dateValue={this.state.date} />}
+            render={() => (
+              <OverviewScreen
+                dateValue={this.state.date}
+                dateName={this.state.nameEl}
+              />
+            )}
           />
           <nav>
             <NavLink exact activeClassName="active" to="/">
               Setup
             </NavLink>
             <NavLink activeClassName="active" to="/overviewscreen">
-              Overview
+              Your Challenge
             </NavLink>
           </nav>
         </Wrapper>
