@@ -21,10 +21,9 @@ const StyleContainer = styled.div`
 
 export default class ContainerInputs extends Component {
   render() {
-    const { challengeName, challengeDate } = this.props
+    const { challengeDate } = this.props
     return (
       <StyleContainer>
-        <div>{challengeName}</div>
         <div>{challengeDate}</div>
       </StyleContainer>
     )

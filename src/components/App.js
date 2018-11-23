@@ -25,7 +25,6 @@ export default class App extends Component {
               <SetupScreen
                 changeDate={inputValue =>
                   this.setState({
-                    ...this.state,
                     date: inputValue
                   })
                 }
