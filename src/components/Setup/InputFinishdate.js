@@ -7,6 +7,7 @@ const StyleInputDate = styled.input`
   width: 200px;
   padding: 5px;
   border: 1px solid #e2083f;
+  color: darkgrey;
 `
 
 export default class InputFinishdate extends Component {

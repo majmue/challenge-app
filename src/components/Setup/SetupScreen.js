@@ -1,23 +1,37 @@
 import React, { Component } from 'react'
-import { ButtonLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import InputChallenge from './InputChallenge'
 import InputFinishdate from './InputFinishdate'
-import AddButton from './AddButton'
+
 import logo from '../../images/me-now_logo.png'
 
 import styled from 'styled-components'
 
 const StyleSetupScreen = styled.section`
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
   height: 100vh;
-  width: 100vh;
-  background-color: #4c88da;
-`
 
+  background-color: #4c88da;
+
+  .btn {
+    height: 30px;
+    width: 200px;
+    align-content: center;
+    background: #e2083f;
+
+    text-shadow: 0px -1px #2980b9;
+    color: white;
+  }
+`
 const Logo = styled.img`
   width: 200px;
   border: 1px solid red;
   .logo {
-    height: 200px;
+    height: 400px;
   }
 `
 
@@ -29,7 +43,11 @@ export default class SetupScreen extends Component {
         <Logo className="logo" src={logo} alt="Logo" />
         <InputChallenge onEnter={inputValue => changeName(inputValue)} />
         <InputFinishdate onChange={inputValue => changeDate(inputValue)} />
-        {/* <ButtonLink to="/overviewscreen">jhgf</ButtonLink> */}
+        <Link to="/overviewscreen">
+          <button type="button" className="btn">
+            Add
+          </button>
+        </Link>
       </StyleSetupScreen>
     )
   }

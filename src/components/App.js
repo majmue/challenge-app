@@ -49,10 +49,10 @@ export default class App extends Component {
           />
           <nav>
             <NavLink exact activeClassName="active" to="/">
-              Setup
+              Home
             </NavLink>
             <NavLink activeClassName="active" to="/overviewscreen">
-              Your Challenge
+              Challenge
             </NavLink>
           </nav>
         </Wrapper>

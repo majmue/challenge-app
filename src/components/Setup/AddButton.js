@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+
 import styled from 'styled-components'
 
-const Button = styled.button`
+const StyleButton = styled.button`
   display: flex;
   align-items: center;
   justify-items: center;
@@ -16,6 +16,6 @@ const Button = styled.button`
 
 export default class AddButton extends Component {
   render() {
-    return <Button>Add</Button>
+    return <StyleButton>Add</StyleButton>
   }
 }

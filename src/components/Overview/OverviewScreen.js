@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+
 import ContainerInputs from './ContainerInputs'
 
 import styled from 'styled-components'
