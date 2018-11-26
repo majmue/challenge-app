@@ -14,15 +14,19 @@ const StyleSetupScreen = styled.section`
   align-content: center;
   grid-gap: 10px;
   height: 100vh;
-
-  background-color: #4c88da;
+  background: linear-gradient(
+    to bottom,
+    #7db9e8 30%,
+    #7db9e8 35%,
+    #207cca 85%,
+    #4c88da 100%
+  );
 
   .btn {
     height: 30px;
     width: 200px;
     align-content: center;
     background: #e2083f;
-
     text-shadow: 0px -1px #2980b9;
     color: white;
   }

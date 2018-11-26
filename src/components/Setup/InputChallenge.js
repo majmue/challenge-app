@@ -18,7 +18,6 @@ export default class InputChallenge extends Component {
     const input = event.target
     if (event.key === 'Enter') {
       this.props.onEnter(input.value)
-      input.value = ''
       input.focus()
     }
   }

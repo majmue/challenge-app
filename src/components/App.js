@@ -6,10 +6,35 @@ import OverviewScreen from './Overview/OverviewScreen'
 import styled from 'styled-components'
 
 const Wrapper = styled.main`
+  display: grid;
+  grid-template-rows: auto 50px;
   height: 100vh;
   background-color: grey;
 `
 
+const StyleNavLink = styled.nav`
+  display: flex;
+  border-top: 1px solid #e2083f;
+
+  a:any-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    background: #efefef;
+
+    &:first-child {
+      border-right: 1px solid #e2083f;
+    }
+
+    &.active {
+      background: #7db9e8;
+      color: white;
+    }
+  }
+`
 export default class App extends Component {
   state = {
     date: '',
@@ -47,14 +72,14 @@ export default class App extends Component {
               />
             )}
           />
-          <nav>
+          <StyleNavLink>
             <NavLink exact activeClassName="active" to="/">
               Home
             </NavLink>
             <NavLink activeClassName="active" to="/overviewscreen">
               Challenge
             </NavLink>
-          </nav>
+          </StyleNavLink>
         </Wrapper>
       </Router>
     )
