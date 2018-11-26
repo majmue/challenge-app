@@ -5,11 +5,10 @@ import styled from 'styled-components'
 const StyleButton = styled.button`
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   height: 30px;
-  width: 40px;
-  background: #e2083f;
-  border-radius: 10%;
+  width: 200px;
+  background-color: #7f0524;
   text-shadow: 0px -1px #2980b9;
   color: white;
 `

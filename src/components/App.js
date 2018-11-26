@@ -14,7 +14,7 @@ const Wrapper = styled.main`
 
 const StyleNavLink = styled.nav`
   display: flex;
-  border-top: 1px solid #e2083f;
+  border-top: 1px solid #7f0524;
 
   a:any-link {
     display: flex;
@@ -26,7 +26,7 @@ const StyleNavLink = styled.nav`
     background: #efefef;
 
     &:first-child {
-      border-right: 1px solid #e2083f;
+      border-right: 1px solid #7f0524;
     }
 
     &.active {

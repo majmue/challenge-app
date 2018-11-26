@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import InputChallenge from './InputChallenge'
 import InputFinishdate from './InputFinishdate'
+import AddButton from './AddButton'
 
 import logo from '../../images/me-now_logo.png'
 
@@ -22,18 +23,13 @@ const StyleSetupScreen = styled.section`
     #4c88da 100%
   );
 
-  .btn {
-    height: 30px;
-    width: 200px;
-    align-content: center;
-    background: #e2083f;
-    text-shadow: 0px -1px #2980b9;
-    color: white;
+  a:any-link {
+    text-decoration: none;
   }
 `
 const Logo = styled.img`
   width: 200px;
-  border: 1px solid red;
+  border: 1px solid #7f0524;
   .logo {
     height: 400px;
   }
@@ -48,9 +44,7 @@ export default class SetupScreen extends Component {
         <InputChallenge onEnter={inputValue => changeName(inputValue)} />
         <InputFinishdate onChange={inputValue => changeDate(inputValue)} />
         <Link to="/overviewscreen">
-          <button type="button" className="btn">
-            Add
-          </button>
+          <AddButton type="button">Add</AddButton>
         </Link>
       </StyleSetupScreen>
     )
