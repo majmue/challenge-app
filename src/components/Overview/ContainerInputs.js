@@ -9,11 +9,10 @@ const StyleContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 50vh;
-  min-width: 300px;
+  min-width: 200px;
   padding: 20px;
   background-color: #efefef;
-  border: 1px solid #e2083f;
-  border-radius: 10px;
+  border: 1px solid #7f0524;
 
   div {
     margin: 10px;

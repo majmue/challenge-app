@@ -14,7 +14,7 @@ const StyleSetupScreen = styled.section`
   justify-content: center;
   align-content: center;
   grid-gap: 10px;
-  height: 100vh;
+  height: 94vh;
   background: linear-gradient(
     to bottom,
     #7db9e8 30%,
@@ -41,7 +41,7 @@ export default class SetupScreen extends Component {
     return (
       <StyleSetupScreen>
         <Logo className="logo" src={logo} alt="Logo" />
-        <InputChallenge onEnter={inputValue => changeName(inputValue)} />
+        <InputChallenge onChange={changeName} />
         <InputFinishdate onChange={inputValue => changeDate(inputValue)} />
         <Link to="/overviewscreen">
           <AddButton type="button">Add</AddButton>

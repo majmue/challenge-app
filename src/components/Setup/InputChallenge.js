@@ -11,21 +11,18 @@ const StyleInputChallenge = styled.input`
 
 export default class InputChallenge extends Component {
   static propTypes = {
-    onEnter: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired
   }
 
-  handleKeyUp = event => {
+  handleInputValue = event => {
     const input = event.target
-    if (event.key === 'Enter') {
-      this.props.onEnter(input.value)
-      input.focus()
-    }
+    this.props.onChange(input.value)
   }
 
   render() {
     return (
       <StyleInputChallenge
-        onKeyUp={this.handleKeyUp}
+        onChange={event => this.handleInputValue(event)}
         placeholder="Add your challenge..."
       />
     )
