@@ -42,7 +42,7 @@ export default class SetupScreen extends Component {
       <StyleSetupScreen>
         <Logo className="logo" src={logo} alt="Logo" />
         <InputChallenge onChange={changeName} />
-        <InputFinishdate onChange={inputValue => changeDate(inputValue)} />
+        <InputFinishdate onChange={changeDate} />
         <Link to="/overviewscreen">
           <AddButton type="button">Add</AddButton>
         </Link>

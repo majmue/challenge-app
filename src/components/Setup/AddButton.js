@@ -9,7 +9,7 @@ const StyleButton = styled.button`
   height: 30px;
   width: 200px;
   background-color: #7f0524;
-  text-shadow: 0px -1px #2980b9;
+  text-shadow: 0 -1px #2980b9;
   color: white;
 `
 

@@ -9,7 +9,6 @@ const StyleInputDate = styled.input`
   border: 1px solid #7f0524;
   color: darkgrey;
 `
-
 export default class InputFinishdate extends Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired
