@@ -37,10 +37,23 @@ const StyleNavLink = styled.nav`
 `
 export default class App extends Component {
   state = {
-    date: '',
-    nameEl: ''
+    challengeInputs: this.load()
   }
+
+  save() {
+    localStorage.setItem(
+      'challenge-inputs',
+      JSON.stringify(this.state.challengeInputs)
+    )
+  }
+
+  load() {
+    return JSON.parse(localStorage.getItem('challenge-inputs')) || []
+  }
+
   render() {
+    this.save()
+
     return (
       <Router>
         <Wrapper>
@@ -49,14 +62,28 @@ export default class App extends Component {
             path="/"
             render={() => (
               <SetupScreen
-                changeDate={inputValue =>
+                changeDate={inputDateValue =>
                   this.setState({
-                    date: inputValue
+                    challengeInputs: {
+                      ...this.state.challengeInputs,
+                      dateEl: inputDateValue
+                    }
                   })
                 }
                 changeName={inputNameValue =>
                   this.setState({
-                    nameEl: inputNameValue
+                    challengeInputs: {
+                      ...this.state.challengeInputs,
+                      nameEl: inputNameValue
+                    }
+                  })
+                }
+                changePicture={inputPictureValue =>
+                  this.setState({
+                    challengeInputs: {
+                      ...this.state.challengeInputs,
+                      pictureEl: inputPictureValue
+                    }
                   })
                 }
               />
@@ -67,8 +94,9 @@ export default class App extends Component {
             path="/overviewscreen"
             render={() => (
               <OverviewScreen
-                dateValue={this.state.date}
-                dateName={this.state.nameEl}
+                dateValue={this.state.challengeInputs.dateEl}
+                nameValue={this.state.challengeInputs.nameEl}
+                pictureValue={this.state.challengeInputs.pictureEl}
               />
             )}
           />

@@ -20,11 +20,15 @@ const Logo = styled.img`
 `
 export default class OverviewScreen extends Component {
   render() {
-    const { dateValue, dateName } = this.props
+    const { dateValue, nameValue, pictureValue } = this.props
     return (
       <StyleOverviewScreen>
         <Logo className="logo" src={logo} alt="Logo" />
-        <ContainerInputs challengeDate={dateValue} challengeName={dateName} />
+        <ContainerInputs
+          challengeDate={dateValue}
+          challengeName={nameValue}
+          challengePicture={pictureValue}
+        />
       </StyleOverviewScreen>
     )
   }

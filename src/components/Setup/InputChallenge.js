@@ -14,7 +14,7 @@ export default class InputChallenge extends Component {
     onChange: PropTypes.func.isRequired
   }
 
-  handleInputValue = event => {
+  handleChangeName = event => {
     const input = event.target
     this.props.onChange(input.value)
   }
@@ -22,7 +22,7 @@ export default class InputChallenge extends Component {
   render() {
     return (
       <StyleInputChallenge
-        onChange={event => this.handleInputValue(event)}
+        onChange={event => this.handleChangeName(event)}
         placeholder="Add your challenge..."
       />
     )

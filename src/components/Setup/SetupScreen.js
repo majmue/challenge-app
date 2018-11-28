@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import InputChallenge from './InputChallenge'
 import InputFinishdate from './InputFinishdate'
-import AddButton from './AddButton'
+import InputSearchUnsplash from './InputSearchUnsplash'
 
 import logo from '../../images/me-now_logo.png'
 
@@ -27,6 +26,7 @@ const StyleSetupScreen = styled.section`
     text-decoration: none;
   }
 `
+
 const Logo = styled.img`
   width: 200px;
   border: 1px solid #7f0524;
@@ -37,15 +37,13 @@ const Logo = styled.img`
 
 export default class SetupScreen extends Component {
   render() {
-    const { changeDate, changeName } = this.props
+    const { changeDate, changeName, changePicture } = this.props
     return (
       <StyleSetupScreen>
         <Logo className="logo" src={logo} alt="Logo" />
         <InputChallenge onChange={changeName} />
         <InputFinishdate onChange={changeDate} />
-        <Link to="/overviewscreen">
-          <AddButton type="button">Add</AddButton>
-        </Link>
+        <InputSearchUnsplash onChange={changePicture} />
       </StyleSetupScreen>
     )
   }
