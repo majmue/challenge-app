@@ -48,7 +48,11 @@ export default class App extends Component {
   }
 
   load() {
-    return JSON.parse(localStorage.getItem('challenge-inputs')) || []
+    try {
+      return JSON.parse(localStorage.getItem('challenge-inputs')) || []
+    } catch (err) {
+      return []
+    }
   }
 
   render() {
