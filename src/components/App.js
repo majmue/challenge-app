@@ -82,14 +82,6 @@ export default class App extends Component {
                     }
                   })
                 }
-                changePicture={inputPictureValue =>
-                  this.setState({
-                    challengeInputs: {
-                      ...this.state.challengeInputs,
-                      pictureEl: inputPictureValue
-                    }
-                  })
-                }
               />
             )}
           />

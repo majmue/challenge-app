@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import InputChallenge from './InputChallenge'
 import InputFinishdate from './InputFinishdate'
-import InputSearchUnsplash from './InputSearchUnsplash'
 
 import logo from '../../images/me-now_logo.png'
 
@@ -43,7 +42,6 @@ export default class SetupScreen extends Component {
         <Logo className="logo" src={logo} alt="Logo" />
         <InputChallenge onChange={changeName} />
         <InputFinishdate onChange={changeDate} />
-        <InputSearchUnsplash onChange={changePicture} />
       </StyleSetupScreen>
     )
   }
