@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import styled from 'styled-components'
+import Counter from './Counter'
 
 const StyleContainer = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ export default class ContainerInputs extends Component {
       <StyleContainer>
         <div>{challengeDate}</div>
         <div>{challengeName}</div>
+        <Counter challengeDate={challengeDate} />
       </StyleContainer>
     )
   }

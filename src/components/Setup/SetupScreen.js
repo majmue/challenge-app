@@ -36,7 +36,7 @@ const Logo = styled.img`
 
 export default class SetupScreen extends Component {
   render() {
-    const { changeDate, changeName, changePicture } = this.props
+    const { changeDate, changeName } = this.props
     return (
       <StyleSetupScreen>
         <Logo className="logo" src={logo} alt="Logo" />

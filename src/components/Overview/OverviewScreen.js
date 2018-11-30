@@ -3,6 +3,7 @@ import logo from '../../images/me-now_logo.png'
 import ContainerInputs from './ContainerInputs'
 
 import styled from 'styled-components'
+//import Counter from './Counter'
 
 const StyleOverviewScreen = styled.section`
   display: grid;
@@ -20,15 +21,13 @@ const Logo = styled.img`
 `
 export default class OverviewScreen extends Component {
   render() {
-    const { dateValue, nameValue, pictureValue } = this.props
+    const { dateValue, nameValue } = this.props
+
     return (
       <StyleOverviewScreen>
         <Logo className="logo" src={logo} alt="Logo" />
-        <ContainerInputs
-          challengeDate={dateValue}
-          challengeName={nameValue}
-          challengePicture={pictureValue}
-        />
+        <ContainerInputs challengeDate={dateValue} challengeName={nameValue} />
+     {/*   <Counter /> */}
       </StyleOverviewScreen>
     )
   }
