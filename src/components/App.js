@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+import Unsplash, { toJson } from 'unsplash-js'
+
 import SetupScreen from './Setup/SetupScreen'
 import OverviewScreen from './Overview/OverviewScreen'
 
@@ -35,6 +37,13 @@ const StyleNavLink = styled.nav`
     }
   }
 `
+const unsplash = new Unsplash({
+  applicationId:
+    '02c57ebbd2a93d26644b034967c373926463f84a7be377ecd72def943bd2e467',
+  secret: '1655e9e533f1a1f33b7b7fb64b062631872ce1c2eac91c3bdf1c8f82cfd3cafe',
+  callbackUrl: '{YOUR_CALLBACK_URL‚}'
+})
+
 export default class App extends Component {
   state = {
     challengeInputs: this.load()
@@ -53,6 +62,13 @@ export default class App extends Component {
     } catch (err) {
       return []
     }
+  }
+
+  searchDogs() {
+    unsplash.search
+      .photos('dogs', 1)
+      .then(toJson)
+      .then(json)
   }
 
   render() {
@@ -103,6 +119,11 @@ export default class App extends Component {
                 pictureValue={this.state.challengeInputs.pictureEl}
               />
             )}
+          />
+          <Route
+            exact
+            path="/dogs"
+            render={() => <React.Fragment>{this.searchDogs()}</React.Fragment>}
           />
           <StyleNavLink>
             <NavLink exact activeClassName="active" to="/">
