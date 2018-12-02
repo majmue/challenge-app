@@ -16,7 +16,8 @@ export default class Counter extends Component {
 
     return (
       <StyleCounter>
-        Due:{moment(challengeDate).toNow()} {/* days */}
+        Due:
+        {moment(challengeDate).fromNow()}
       </StyleCounter>
     )
   }
