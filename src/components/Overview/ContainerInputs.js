@@ -25,8 +25,9 @@ export default class ContainerInputs extends Component {
     const { challengeDate, challengeName } = this.props
     return (
       <StyleContainer>
-        <div>{challengeDate}</div>
+        Your challenge is:
         <div>{challengeName}</div>
+        <div>{challengeDate}</div>
         <Counter challengeDate={challengeDate} />
       </StyleContainer>
     )

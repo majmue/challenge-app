@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
+import { faHourglass } from '@fortawesome/free-solid-svg-icons'
+
 import SetupScreen from './Setup/SetupScreen'
 import OverviewScreen from './Overview/OverviewScreen'
-
 import styled from 'styled-components'
+
+library.add(faEdit)
+library.add(faHourglass)
 
 const Wrapper = styled.main`
   display: grid;
@@ -33,6 +40,7 @@ const StyleNavLink = styled.nav`
     &.active {
       background: #7db9e8;
       color: white;
+      font-size: 18pt;
     }
   }
 `
@@ -99,10 +107,10 @@ export default class App extends Component {
           />
           <StyleNavLink>
             <NavLink exact activeClassName="active" to="/">
-              Home
+              <FontAwesomeIcon className="icon" icon="edit" />
             </NavLink>
             <NavLink activeClassName="active" to="/overviewscreen">
-              Challenge
+              <FontAwesomeIcon className="icon" icon="hourglass" />
             </NavLink>
           </StyleNavLink>
         </Wrapper>
