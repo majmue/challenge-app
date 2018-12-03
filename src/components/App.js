@@ -4,14 +4,14 @@ import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
-import { faHourglass } from '@fortawesome/free-solid-svg-icons'
+import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons'
 
 import SetupScreen from './Setup/SetupScreen'
 import OverviewScreen from './Overview/OverviewScreen'
 import styled from 'styled-components'
 
 library.add(faEdit)
-library.add(faHourglass)
+library.add(faHourglassHalf)
 
 const Wrapper = styled.main`
   display: grid;
@@ -110,7 +110,7 @@ export default class App extends Component {
               <FontAwesomeIcon className="icon" icon="edit" />
             </NavLink>
             <NavLink activeClassName="active" to="/overviewscreen">
-              <FontAwesomeIcon className="icon" icon="hourglass" />
+              <FontAwesomeIcon className="icon" icon="hourglass-half" />
             </NavLink>
           </StyleNavLink>
         </Wrapper>
