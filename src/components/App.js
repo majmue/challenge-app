@@ -46,7 +46,8 @@ const StyleNavLink = styled.nav`
 `
 export default class App extends Component {
   state = {
-    challengeInputs: this.load()
+    challengeInputs: this.load(),
+    backgroundImage: null
   }
 
   save() {
@@ -62,6 +63,12 @@ export default class App extends Component {
     } catch (err) {
       return []
     }
+  }
+
+  setBackgroundImage = path => {
+    this.setState({
+      backgroundImage: path
+    })
   }
 
   render() {
@@ -91,6 +98,8 @@ export default class App extends Component {
                     }
                   })
                 }
+                changeBackground={this.setBackgroundImage}
+                selectedImage={this.state.backgroundImage}
               />
             )}
           />
@@ -101,16 +110,16 @@ export default class App extends Component {
               <OverviewScreen
                 dateValue={this.state.challengeInputs.dateEl}
                 nameValue={this.state.challengeInputs.nameEl}
-                pictureValue={this.state.challengeInputs.pictureEl}
+                backgroundImage={this.state.backgroundImage}
               />
             )}
           />
           <StyleNavLink>
             <NavLink exact activeClassName="active" to="/">
-              <FontAwesomeIcon className="icon" icon="edit" />
+              <FontAwesomeIcon icon="edit" />
             </NavLink>
             <NavLink activeClassName="active" to="/overviewscreen">
-              <FontAwesomeIcon className="icon" icon="hourglass-half" />
+              <FontAwesomeIcon icon="hourglass-half" />
             </NavLink>
           </StyleNavLink>
         </Wrapper>

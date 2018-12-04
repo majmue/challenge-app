@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
 import img1 from '../../images/bekir-donmez-335320-unsplash.jpg'
-import img2 from '../../images/daniel-olah-432079-unsplash.jpg'
-import img3 from '../../images/eberhard-grossgasteiger-382452-unsplash.jpg'
-import img4 from '../../images/brynden-429043-unsplash.jpg'
+// import img2 from '../../images/daniel-olah-432079-unsplash.jpg'
+// import img3 from '../../images/eberhard-grossgasteiger-382452-unsplash.jpg'
+// import img4 from '../../images/brynden-429043-unsplash.jpg'
 
 import styled from 'styled-components'
 
@@ -20,6 +20,10 @@ const StyleContainer = styled.section`
     height: 99px;
     width: 99px;
     padding: 2px;
+
+    &.selected {
+      outline: 4px solid white;
+    }
   }
 
   .name {
@@ -34,15 +38,32 @@ export default class ContainerImages extends Component {
   render() {
     return (
       <StyleContainer>
-        {/* Choose your picture: */}
         <div className="name">Choose your picture:</div>
-        <img className="img" src={img1} alt="piled pebbles" />
-        <img className="img" src={img2} alt="sprint circle" />
-        <img className="img" src={img3} alt="mountain in fog" />
-        <img className="img" src={img4} alt="waves of water hit the beach" />
+        <img
+          className={this.props.selectedImage === img1 ? 'img selected' : 'img'}
+          onClick={() => this.props.onClick(img1)}
+          src={img1}
+          alt="piled pebbles"
+        />
+        {/* <img
+          className={this.props.selectedImage === img2 ? 'img selected' : 'img'}
+          onClick={() => this.props.onClick(img2)}
+          src={img2}
+          alt="sprint circle"
+        />
+        <img
+          className={this.props.selectedImage === img3 ? 'img selected' : 'img'}
+          onClick={() => this.props.onClick(img3)}
+          src={img3}
+          alt="mountain in fog"
+        />
+        <img
+          className={this.props.selectedImage === img4 ? 'img selected' : 'img'}
+          onClick={() => this.props.onClick(img4)}
+          src={img4}
+          alt="waves of water hit the beach"
+        /> */}
       </StyleContainer>
     )
   }
 }
-
-// >url(${img})</div>
