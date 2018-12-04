@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import logo from '../../images/me-now_logo.png'
 import ContainerInputs from './ContainerInputs'
+import img from '../../images/trevor-cleveland-163456_Challenge-App_1.jpg'
 
 import styled from 'styled-components'
 
@@ -9,14 +10,12 @@ const StyleOverviewScreen = styled.section`
   justify-content: center;
   align-items: center;
   height: 94vh;
-  background: white;
+  background: url(${img});
 `
 const Logo = styled.img`
-  width: 200px;
+  justify-self: center;
+  width: 150px;
   border: 1px solid #7f0524;
-  .logo {
-    height: 400px;
-  }
 `
 
 export default class OverviewScreen extends Component {
