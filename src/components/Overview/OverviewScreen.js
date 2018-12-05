@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../../images/me-now_logo.png'
+import logo from '../../images/me-now-logo.PNG'
 import ContainerInputs from './ContainerInputs'
 
 import styled from 'styled-components'

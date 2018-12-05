@@ -24,7 +24,7 @@ const StyleContainer = styled.section`
     padding: 3px;
 
     &.selected {
-      outline: 4px solid white;
+      outline: 2px solid #4089ee;
     }
   }
 
@@ -37,11 +37,31 @@ const StyleContainer = styled.section`
 `
 
 export default class ContainerImages extends Component {
+  state = {
+    images: [
+      { path: img1, altText: 'piled pebbles' },
+      { path: img2, altText: 'piled pebbles' },
+      { path: img3, altText: 'piled pebbles' },
+      { path: img4, altText: 'piled pebbles' }
+    ]
+  }
   render() {
     return (
       <StyleContainer>
         <div className="name">Choose your picture:</div>
-        <img
+        {this.state.images.map(img => {
+          return (
+            <img
+              className={
+                this.props.selectedImage === img.path ? 'img selected' : 'img'
+              }
+              onClick={() => this.props.onClick(img.path)}
+              src={img.path}
+              alt={img.altText}
+            />
+          )
+        })}
+        {/* <img
           className={this.props.selectedImage === img1 ? 'img selected' : 'img'}
           onClick={() => this.props.onClick(img1)}
           src={img1}
@@ -64,7 +84,7 @@ export default class ContainerImages extends Component {
           onClick={() => this.props.onClick(img4)}
           src={img4}
           alt="waves of water hit the beach"
-        />
+        /> */}
       </StyleContainer>
     )
   }

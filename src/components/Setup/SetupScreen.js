@@ -3,7 +3,7 @@ import InputChallenge from './InputChallenge'
 import InputFinishdate from './InputFinishdate'
 import ContainerImages from './ContainerImages'
 
-import logo from '../../images/me-now_logo.png'
+import logo from '../../images/me-now-logo.PNG'
 
 import styled from 'styled-components'
 
@@ -17,10 +17,11 @@ const StyleSetupScreen = styled.section`
   height: 94vh;
   background: linear-gradient(
     to bottom,
-    #7db9e8 10%,
-    #7db9e8 15%,
-    #207cca 65%,
-    #4c88da 100%
+    #d8e9f8 24%,
+    #8ec0ec 56%,
+    #66beea 79%,
+    #73b1e7 92%,
+    #9ec9ee 100%
   );
 
   a:any-link {

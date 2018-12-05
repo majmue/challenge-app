@@ -4,15 +4,8 @@ export default createGlobalStyle`
 
 * {
   box-sizing: border-box;
-}
-
-/* *:focus {
   outline: none;
-  
-  input:focus {
-  outline: #0099CC solid 2px;
-  }
-} */
+}
 
 body {
   margin: 0px;

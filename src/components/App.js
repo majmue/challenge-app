@@ -36,7 +36,7 @@ const StyleNavLink = styled.nav`
     }
 
     &.active {
-      background: #7db9e8;
+      background: #4089ee;
       color: white;
       font-size: 18pt;
     }
