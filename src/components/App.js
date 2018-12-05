@@ -17,9 +17,8 @@ const Wrapper = styled.main`
   display: grid;
   grid-template-rows: auto 50px;
   height: 100vh;
-  background-color: grey;
+  background-color: #fcfcfc;
 `
-
 const StyleNavLink = styled.nav`
   display: flex;
   border-top: 1px solid #7f0524;

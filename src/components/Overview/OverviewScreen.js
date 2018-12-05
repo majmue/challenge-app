@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import logo from '../../images/me-now_logo.png'
 import ContainerInputs from './ContainerInputs'
-// import img from '../../images/trevor-cleveland-163456_Challenge-App_1.jpg'
 
 import styled from 'styled-components'
 
@@ -11,7 +10,9 @@ const StyleOverviewScreen = styled.section`
   align-items: center;
   height: 94vh;
   background: url(${props => props.bg});
+  background-size: cover;
 `
+
 const Logo = styled.img`
   justify-self: center;
   width: 150px;
@@ -24,7 +25,7 @@ export default class OverviewScreen extends Component {
 
     return (
       <StyleOverviewScreen bg={this.props.backgroundImage}>
-        <Logo className="logo" src={logo} alt="Logo" />
+        <Logo src={logo} alt="Logo" />
         <ContainerInputs challengeDate={dateValue} challengeName={nameValue} />
       </StyleOverviewScreen>
     )

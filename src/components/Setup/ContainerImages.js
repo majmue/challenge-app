@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
 import img1 from '../../images/bekir-donmez-335320-unsplash.jpg'
-// import img2 from '../../images/daniel-olah-432079-unsplash.jpg'
-// import img3 from '../../images/eberhard-grossgasteiger-382452-unsplash.jpg'
-// import img4 from '../../images/brynden-429043-unsplash.jpg'
+import img2 from '../../images/daniel-olah-432079-unsplash.jpg'
+import img3 from '../../images/eberhard-grossgasteiger-382452-unsplash.jpg'
+import img4 from '../../images/brynden-429043-unsplash.jpg'
 
 import styled from 'styled-components'
 
@@ -45,7 +45,7 @@ export default class ContainerImages extends Component {
           src={img1}
           alt="piled pebbles"
         />
-        {/* <img
+        <img
           className={this.props.selectedImage === img2 ? 'img selected' : 'img'}
           onClick={() => this.props.onClick(img2)}
           src={img2}
@@ -62,7 +62,7 @@ export default class ContainerImages extends Component {
           onClick={() => this.props.onClick(img4)}
           src={img4}
           alt="waves of water hit the beach"
-        /> */}
+        />
       </StyleContainer>
     )
   }
