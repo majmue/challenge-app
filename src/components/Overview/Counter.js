@@ -8,7 +8,6 @@ const StyleCounter = styled.span`
   justify-content: center;
   align-items: center;
   padding: 10px;
-  border: 1px solid #7f0524;
   background-color: white;
 `
 

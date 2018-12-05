@@ -6,8 +6,7 @@ const StyleInputDate = styled.input`
   height: 30px;
   width: 200px;
   padding: 5px;
-  border: 1px solid #7f0524;
-  background-color: whitesmoke;
+  background-color: #efefef;
 `
 export default class InputFinishdate extends Component {
   static propTypes = {

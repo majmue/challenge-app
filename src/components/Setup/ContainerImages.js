@@ -12,14 +12,16 @@ const StyleContainer = styled.section`
   flex-wrap: wrap;
   height: auto;
   width: 200px;
-
   background-color: #efefef;
-  border: 1px solid #7f0524;
+  border-width: 2px 1px 2px 3px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
 
   .img {
-    height: 99px;
-    width: 99px;
-    padding: 2px;
+    height: 97px;
+    width: 97px;
+    padding: 3px;
 
     &.selected {
       outline: 4px solid white;
@@ -28,9 +30,9 @@ const StyleContainer = styled.section`
 
   .name {
     padding: 5px;
-    font-size: 10pt;
+    font-size: 9pt;
     width: 200px;
-    border-bottom: 1px solid #7f0524;
+    font-family: monospace;
   }
 `
 

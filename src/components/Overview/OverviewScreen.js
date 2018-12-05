@@ -16,7 +16,6 @@ const StyleOverviewScreen = styled.section`
 const Logo = styled.img`
   justify-self: center;
   width: 150px;
-  border: 1px solid #7f0524;
 `
 
 export default class OverviewScreen extends Component {

@@ -11,14 +11,15 @@ const StyleSetupScreen = styled.section`
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
+  justify-items: center;
   align-content: center;
   grid-gap: 10px;
   height: 94vh;
   background: linear-gradient(
     to bottom,
-    #7db9e8 30%,
-    #7db9e8 35%,
-    #207cca 85%,
+    #7db9e8 10%,
+    #7db9e8 15%,
+    #207cca 65%,
     #4c88da 100%
   );
 
@@ -28,11 +29,9 @@ const StyleSetupScreen = styled.section`
 `
 
 const Logo = styled.img`
-  width: 200px;
-  border: 1px solid #7f0524;
-  .logo {
-    height: 400px;
-  }
+  display: flex;
+  width: 150px;
+  margin-bottom: 100px;
 `
 
 export default class SetupScreen extends Component {

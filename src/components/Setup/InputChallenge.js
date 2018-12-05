@@ -6,7 +6,8 @@ const StyleInputChallenge = styled.input`
   height: 30px;
   width: 200px;
   padding: 5px;
-  border: 1px solid #7f0524;
+  background-color: #efefef;
+  font-style: 11px system-ui;
 `
 
 export default class InputChallenge extends Component {

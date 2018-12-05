@@ -21,7 +21,6 @@ const Wrapper = styled.main`
 `
 const StyleNavLink = styled.nav`
   display: flex;
-  border-top: 1px solid #7f0524;
 
   a:any-link {
     display: flex;
@@ -33,7 +32,7 @@ const StyleNavLink = styled.nav`
     background: #efefef;
 
     &:first-child {
-      border-right: 1px solid #7f0524;
+      border-right: 1px solid lightgrey;
     }
 
     &.active {
@@ -43,6 +42,7 @@ const StyleNavLink = styled.nav`
     }
   }
 `
+
 export default class App extends Component {
   state = {
     challengeInputs: this.load(),
