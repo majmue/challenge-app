@@ -33,6 +33,7 @@ const StyleContainer = styled.section`
     font-size: 9pt;
     width: 200px;
     font-family: monospace;
+    padding-bottom: 15px;
   }
 `
 
