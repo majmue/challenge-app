@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const StyleInputDate = styled.input`
+const StyleInputMilestone = styled.input`
   height: 30px;
   width: 200px;
   padding: 5px;
   background-color: #efefef;
+  font-style: 11px system-ui;
   border-width: 2px 1px 2px 3px;
   border-style: inset;
   border-color: initial;
@@ -16,22 +16,18 @@ const StyleInputDate = styled.input`
     border-color: #4089ee;
   }
 `
-export default class InputFinishdate extends Component {
-  static propTypes = {
-    onChange: PropTypes.func.isRequired
-  }
 
-  handleChangeDate = event => {
+export default class InputMilestone extends Component {
+  handleMilestones = event => {
     const input = event.target
     this.props.onChange(input.value)
-    input.focus()
   }
 
   render() {
     return (
-      <StyleInputDate
-        type="date"
-        onChange={event => this.handleChangeDate(event)}
+      <StyleInputMilestone
+        onChange={event => this.handleMilestones(event)}
+        placeholder="Add your milestone..."
       />
     )
   }

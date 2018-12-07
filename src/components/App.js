@@ -8,6 +8,7 @@ import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons'
 
 import SetupScreen from './Setup/SetupScreen'
 import OverviewScreen from './Overview/OverviewScreen'
+
 import styled from 'styled-components'
 
 library.add(faEdit)
@@ -46,6 +47,7 @@ const StyleNavLink = styled.nav`
 export default class App extends Component {
   state = {
     challengeInputs: this.load(),
+    milestones: ['foo', 'bar', 'baz'],
     backgroundImage: null
   }
 
@@ -72,6 +74,7 @@ export default class App extends Component {
 
   render() {
     this.save()
+    console.log('App', this.state.milestones)
 
     return (
       <Router>
@@ -97,6 +100,14 @@ export default class App extends Component {
                     }
                   })
                 }
+                addMilestone={text =>
+                  this.setState({
+                    challengeInputs: {
+                      ...this.state.challengeInputs,
+                      milestones: [...this.state.milestones, text]
+                    }
+                  })
+                }
                 changeBackground={this.setBackgroundImage}
                 selectedImage={this.state.backgroundImage}
               />
@@ -109,6 +120,7 @@ export default class App extends Component {
               <OverviewScreen
                 dateValue={this.state.challengeInputs.dateEl}
                 nameValue={this.state.challengeInputs.nameEl}
+                milestones={this.state.milestones}
                 backgroundImage={this.state.backgroundImage}
               />
             )}

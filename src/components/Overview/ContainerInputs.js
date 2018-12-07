@@ -17,9 +17,13 @@ const StyleContainer = styled.div`
 
 export default class ContainerInputs extends Component {
   render() {
-    const { challengeDate, challengeName } = this.props
+    const { challengeDate, challengeName, milestones } = this.props
+    console.log(milestones)
     return (
       <StyleContainer>
+        {milestones.map(text => {
+          return <p>{text}</p>
+        })}
         Your challenge:
         <div>{challengeName}</div>
         <div>{challengeDate}</div>
