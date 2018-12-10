@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const StyleInputChallenge = styled.input`
@@ -15,10 +14,6 @@ const StyleInputChallenge = styled.input`
 `
 
 export default class InputChallenge extends Component {
-  static propTypes = {
-    onChange: PropTypes.func.isRequired
-  }
-
   handleChangeName = event => {
     const input = event.target
     this.props.onChange(input.value)

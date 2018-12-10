@@ -44,25 +44,26 @@ const StyleNavLink = styled.nav`
 `
 
 export default class App extends Component {
-  state = {
-    challengeInputs: this.load(),
-    backgroundImage: null
+  state = this.load() || {
+    challengeInputs: [],
+    backgroundImage: null,
+    milestones: []
   }
 
   save() {
-    localStorage.setItem(
-      'challenge-inputs',
-      JSON.stringify(this.state.challengeInputs)
-    )
+    localStorage.setItem('challenge-app--state', JSON.stringify(this.state))
   }
 
   load() {
     try {
-      return JSON.parse(localStorage.getItem('challenge-inputs')) || []
+      return JSON.parse(localStorage.getItem('challenge-app--state')) || null
     } catch (err) {
-      return []
+      return null
     }
   }
+
+  addMilestone = text =>
+    this.setState({ milestones: [...this.state.milestones, text] })
 
   setBackgroundImage = path => {
     this.setState({
@@ -107,6 +108,8 @@ export default class App extends Component {
             path="/overviewscreen"
             render={() => (
               <OverviewScreen
+                addMilestone={this.addMilestone}
+                arrayMilestones={this.state.milestones}
                 dateValue={this.state.challengeInputs.dateEl}
                 nameValue={this.state.challengeInputs.nameEl}
                 backgroundImage={this.state.backgroundImage}

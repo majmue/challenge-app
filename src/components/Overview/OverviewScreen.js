@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import logo from '../../images/me-now-logo.PNG'
 import ContainerInputs from './ContainerInputs'
+import ContainerMilestones from './ContainerMilestones'
 
 import styled from 'styled-components'
 
@@ -20,12 +21,22 @@ const Logo = styled.img`
 
 export default class OverviewScreen extends Component {
   render() {
-    const { dateValue, nameValue } = this.props
+    const {
+      dateValue,
+      nameValue,
+      addMilestone,
+      backgroundImage,
+      arrayMilestones
+    } = this.props
 
     return (
-      <StyleOverviewScreen bg={this.props.backgroundImage}>
+      <StyleOverviewScreen bg={backgroundImage}>
         <Logo src={logo} alt="Logo" />
         <ContainerInputs challengeDate={dateValue} challengeName={nameValue} />
+        <ContainerMilestones
+          addMilestone={addMilestone}
+          arrayMilestones={arrayMilestones}
+        />
       </StyleOverviewScreen>
     )
   }
