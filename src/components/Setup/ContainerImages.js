@@ -12,17 +12,20 @@ const StyleContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
   height: auto;
-  width: 200px;
+  width: 350px;
   background-color: #efefef;
   border-width: 2px 1px 2px 3px;
   border-style: inset;
   border-color: initial;
   border-image: initial;
+  font-family: 'Dosis', sans-serif;
+  font-size: 12pt;
+  color: #5c5d61;
 
   .img {
-    height: 97px;
-    width: 97px;
-    padding: 3px;
+    height: 172px;
+    width: 172px;
+    padding: 0 5px 5px 5px;
 
     &.selected {
       outline: 2px solid #4089ee;
@@ -31,9 +34,7 @@ const StyleContainer = styled.section`
 
   .name {
     padding: 5px;
-    font-size: 9pt;
     width: 200px;
-    font-family: monospace;
     padding-bottom: 15px;
   }
 `

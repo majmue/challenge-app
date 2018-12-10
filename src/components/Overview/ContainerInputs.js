@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Counter from './Counter'
 
-const StyleContainer = styled.div`
+const StyleContainer = styled.section`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -12,7 +12,14 @@ const StyleContainer = styled.div`
   height: 30vh;
   min-width: 200px;
   padding: 20px;
-  background-color: #efefef;
+  background-color: white;
+  opacity: 0.8;
+  font-family: 'Dosis', sans-serif;
+  font-size: 12pt;
+
+  &.logo {
+    color: #4089ee;
+  }
 `
 
 export default class ContainerInputs extends Component {
@@ -21,7 +28,7 @@ export default class ContainerInputs extends Component {
     return (
       <StyleContainer>
         Your challenge:
-        <div>{challengeName}</div>
+        <div className="input">{challengeName}</div>
         <div>{challengeDate}</div>
         <Counter challengeDate={challengeDate} />
       </StyleContainer>

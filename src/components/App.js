@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 
+import logo from '../images/me-now-logo.PNG'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
@@ -13,11 +15,25 @@ import styled from 'styled-components'
 library.add(faEdit)
 library.add(faHourglassHalf)
 
+const Logo = styled.img`
+  display: flex;
+  width: 150px;
+  margin-top: 20px;
+  justify-self: center;
+`
+
 const Wrapper = styled.main`
   display: grid;
-  grid-template-rows: auto 50px;
+  grid-template-rows: 100px auto 50px;
   height: 100vh;
-  background-color: #fcfcfc;
+  background: linear-gradient(
+    to bottom,
+    #d8e9f8 24%,
+    #8ec0ec 56%,
+    #66beea 79%,
+    #73b1e7 92%,
+    #9ec9ee 100%
+  );
 `
 const StyleNavLink = styled.nav`
   display: flex;
@@ -77,6 +93,7 @@ export default class App extends Component {
     return (
       <Router>
         <Wrapper>
+          <Logo src={logo} alt="Logo" />
           <Route
             exact
             path="/"

@@ -8,7 +8,8 @@ const StyleCounter = styled.span`
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: white;
+  background-color: #efefef;
+  border: 0.5px solid #4089ee;
 `
 
 export default class Counter extends Component {

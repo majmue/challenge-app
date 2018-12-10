@@ -3,12 +3,13 @@ import styled from 'styled-components'
 
 const StyleInputMilestone = styled.input`
   height: 30px;
-  width: 200px;
+  width: 300px;
   padding: 5px;
-  background-color: white;
-  font-style: 11px system-ui;
+  background-color: #efefef;
   border-width: 2px 1px 2px 3px;
   border-color: white;
+  font-family: 'Dosis', sans-serif;
+  font-size: 12pt;
 
   &:focus {
     border-color: #4089ee;

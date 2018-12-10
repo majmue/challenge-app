@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import logo from '../../images/me-now-logo.PNG'
 import ContainerInputs from './ContainerInputs'
 import ContainerMilestones from './ContainerMilestones'
 
@@ -7,16 +6,13 @@ import styled from 'styled-components'
 
 const StyleOverviewScreen = styled.section`
   display: grid;
-  justify-content: center;
+  grid-template-rows: auto;
+  justify-self: center;
   align-items: center;
-  height: 94vh;
   background: url(${props => props.bg});
   background-size: cover;
-`
-
-const Logo = styled.img`
-  justify-self: center;
-  width: 150px;
+  font-family: 'Dosis', sans-serif;
+  width: 350px;
 `
 
 export default class OverviewScreen extends Component {
@@ -31,7 +27,6 @@ export default class OverviewScreen extends Component {
 
     return (
       <StyleOverviewScreen bg={backgroundImage}>
-        <Logo src={logo} alt="Logo" />
         <ContainerInputs challengeDate={dateValue} challengeName={nameValue} />
         <ContainerMilestones
           addMilestone={addMilestone}

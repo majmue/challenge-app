@@ -3,18 +3,15 @@ import InputChallenge from './InputChallenge'
 import InputFinishdate from './InputFinishdate'
 import ContainerImages from './ContainerImages'
 
-import logo from '../../images/me-now-logo.PNG'
-
 import styled from 'styled-components'
 
 const StyleSetupScreen = styled.section`
   display: grid;
-  grid-template-columns: auto;
+  grid-template-rows: auto 50px;
   justify-content: center;
   justify-items: center;
   align-content: center;
   grid-gap: 10px;
-  height: 94vh;
   background: linear-gradient(
     to bottom,
     #d8e9f8 24%,
@@ -29,12 +26,6 @@ const StyleSetupScreen = styled.section`
   }
 `
 
-const Logo = styled.img`
-  display: flex;
-  width: 150px;
-  margin-bottom: 100px;
-`
-
 export default class SetupScreen extends Component {
   render() {
     const {
@@ -46,7 +37,6 @@ export default class SetupScreen extends Component {
 
     return (
       <StyleSetupScreen>
-        <Logo className="logo" src={logo} alt="Logo" />
         <InputChallenge onChange={changeName} />
         <InputFinishdate onChange={changeDate} />
         <ContainerImages

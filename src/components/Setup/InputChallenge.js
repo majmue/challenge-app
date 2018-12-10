@@ -3,10 +3,17 @@ import styled from 'styled-components'
 
 const StyleInputChallenge = styled.input`
   height: 30px;
-  width: 200px;
+  min-width: 350px;
   padding: 5px;
   background-color: #efefef;
-  font-style: 11px system-ui;
+  font-family: 'Dosis', sans-serif;
+  src: url('../../webfonts/Dosis-Regular.ttf');
+  font-size: 12pt;
+  color: #5c5d61;
+  border-width: 2px 1px 2px 3px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
 
   &:focus {
     border-color: #4089ee;
