@@ -12,14 +12,6 @@ const StyleSetupScreen = styled.section`
   justify-items: center;
   align-content: center;
   grid-gap: 10px;
-  background: linear-gradient(
-    to bottom,
-    #d8e9f8 24%,
-    #8ec0ec 56%,
-    #66beea 79%,
-    #73b1e7 92%,
-    #9ec9ee 100%
-  );
 
   a:any-link {
     text-decoration: none;
@@ -40,8 +32,8 @@ export default class SetupScreen extends Component {
         <InputChallenge onChange={changeName} />
         <InputFinishdate onChange={changeDate} />
         <ContainerImages
-          selectedImage={selectedImage}
           onClick={changeBackground}
+          selectedImage={selectedImage}
         />
       </StyleSetupScreen>
     )

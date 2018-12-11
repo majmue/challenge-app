@@ -9,13 +9,19 @@ const StyleCounter = styled.span`
   align-items: center;
   padding: 10px;
   background-color: #efefef;
-  border: 0.5px solid #4089ee;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  font-weight: regular;
 `
 
 export default class Counter extends Component {
   render() {
     const { challengeDate } = this.props
 
-    return <StyleCounter>Due: {moment(challengeDate).fromNow()}</StyleCounter>
+    return (
+      <StyleCounter>
+        <strong>Due: {moment(challengeDate).fromNow()}</strong>
+      </StyleCounter>
+    )
   }
 }

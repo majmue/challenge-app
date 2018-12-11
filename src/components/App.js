@@ -16,6 +16,8 @@ library.add(faEdit)
 library.add(faHourglassHalf)
 
 const Logo = styled.img`
+  position: relative;
+  z-index: 1;
   display: flex;
   width: 150px;
   margin-top: 20px;
@@ -37,6 +39,7 @@ const Wrapper = styled.main`
 `
 const StyleNavLink = styled.nav`
   display: flex;
+  position: relative;
 
   a:any-link {
     display: flex;

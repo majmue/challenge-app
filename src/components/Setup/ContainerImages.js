@@ -18,14 +18,13 @@ const StyleContainer = styled.section`
   border-style: inset;
   border-color: initial;
   border-image: initial;
-  font-family: 'Dosis', sans-serif;
   font-size: 12pt;
   color: #5c5d61;
 
   .img {
     height: 172px;
     width: 172px;
-    padding: 0 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
 
     &.selected {
       outline: 2px solid #4089ee;

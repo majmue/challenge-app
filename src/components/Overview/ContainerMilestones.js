@@ -8,9 +8,9 @@ const StyleContainterMilestones = styled.section`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  justify-self: center;
   align-items: center;
-  max-height: 30vh;
-  min-width: 200px;
+  width: 350px;
   padding: 20px;
   background-color: white;
   opacity: 0.8;

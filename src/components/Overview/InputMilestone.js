@@ -5,10 +5,10 @@ const StyleInputMilestone = styled.input`
   height: 30px;
   width: 300px;
   padding: 5px;
+  margin-bottom: 15px;
   background-color: #efefef;
   border-width: 2px 1px 2px 3px;
   border-color: white;
-  font-family: 'Dosis', sans-serif;
   font-size: 12pt;
 
   &:focus {

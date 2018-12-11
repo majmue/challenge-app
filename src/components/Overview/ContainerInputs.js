@@ -8,18 +8,23 @@ const StyleContainer = styled.section`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  justify-self: center;
   align-items: center;
   height: 30vh;
-  min-width: 200px;
+  width: 350px;
   padding: 20px;
   background-color: white;
   opacity: 0.8;
-  font-family: 'Dosis', sans-serif;
-  font-size: 12pt;
+  /* font-family: 'Dosis', sans-serif; */
 
   &.logo {
     color: #4089ee;
   }
+`
+
+const Headline = styled.h1`
+  font-size: 1.6em;
+  margin: 0;
 `
 
 export default class ContainerInputs extends Component {
@@ -27,8 +32,8 @@ export default class ContainerInputs extends Component {
     const { challengeDate, challengeName } = this.props
     return (
       <StyleContainer>
-        Your challenge:
-        <div className="input">{challengeName}</div>
+        <div>Your challenge:</div>
+        <Headline className="input">{challengeName}</Headline>
         <div>{challengeDate}</div>
         <Counter challengeDate={challengeDate} />
       </StyleContainer>

@@ -6,13 +6,24 @@ import styled from 'styled-components'
 
 const StyleOverviewScreen = styled.section`
   display: grid;
+  grid-gap: 10px;
   grid-template-rows: auto;
   justify-self: center;
   align-items: center;
   background: url(${props => props.bg});
   background-size: cover;
-  font-family: 'Dosis', sans-serif;
-  width: 350px;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  overflow-y: scroll;
+`
+
+const Background = styled.img`
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 `
 
 export default class OverviewScreen extends Component {
@@ -26,7 +37,8 @@ export default class OverviewScreen extends Component {
     } = this.props
 
     return (
-      <StyleOverviewScreen bg={backgroundImage}>
+      <StyleOverviewScreen>
+        {backgroundImage && <Background src={backgroundImage} alt="" />}
         <ContainerInputs challengeDate={dateValue} challengeName={nameValue} />
         <ContainerMilestones
           addMilestone={addMilestone}
