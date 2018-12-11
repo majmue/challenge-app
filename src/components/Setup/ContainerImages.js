@@ -14,17 +14,19 @@ const StyleContainer = styled.section`
   height: auto;
   width: 350px;
   background-color: #efefef;
-  border-width: 2px 1px 2px 3px;
+  font-size: 12pt;
+  color: #5c5d61;
   border-style: inset;
   border-color: initial;
   border-image: initial;
-  font-size: 12pt;
-  color: #5c5d61;
+  border-radius: 10px;
+  border-width: 0.5px;
 
   .img {
     height: 172px;
-    width: 172px;
+    width: 170px;
     padding: 5px 5px 5px 5px;
+    margin: 2px;
 
     &.selected {
       outline: 2px solid #4089ee;

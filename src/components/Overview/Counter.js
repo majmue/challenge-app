@@ -12,6 +12,7 @@ const StyleCounter = styled.span`
   font-family: 'Montserrat', sans-serif;
   font-size: 12pt;
   font-weight: regular;
+  border-radius: 5px;
 `
 
 export default class Counter extends Component {

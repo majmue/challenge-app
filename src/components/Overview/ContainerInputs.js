@@ -14,12 +14,8 @@ const StyleContainer = styled.section`
   width: 350px;
   padding: 20px;
   background-color: white;
-  opacity: 0.8;
-  /* font-family: 'Dosis', sans-serif; */
-
-  &.logo {
-    color: #4089ee;
-  }
+  opacity: 0.9;
+  border-radius: 10px;
 `
 
 const Headline = styled.h1`

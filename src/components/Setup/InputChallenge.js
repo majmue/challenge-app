@@ -8,10 +8,8 @@ const StyleInputChallenge = styled.input`
   background-color: #efefef;
   font-size: 12pt;
   color: #5c5d61;
-  border-width: 2px 1px 2px 3px;
-  border-style: inset;
-  border-color: initial;
-  border-image: initial;
+  border-radius: 10px;
+  border-width: 0.5px;
 
   &:focus {
     border-color: #4089ee;

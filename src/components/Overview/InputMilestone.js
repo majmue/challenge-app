@@ -7,8 +7,8 @@ const StyleInputMilestone = styled.input`
   padding: 5px;
   margin-bottom: 15px;
   background-color: #efefef;
-  border-width: 2px 1px 2px 3px;
-  border-color: white;
+  border-radius: 10px;
+  border-width: 0.5px;
   font-size: 12pt;
 
   &:focus {
