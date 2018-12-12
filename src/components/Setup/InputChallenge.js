@@ -26,6 +26,7 @@ export default class InputChallenge extends Component {
   render() {
     return (
       <StyleInputChallenge
+        data-cy="InputChallenge"
         onChange={event => this.handleChangeName(event)}
         placeholder="Add your challenge..."
       />

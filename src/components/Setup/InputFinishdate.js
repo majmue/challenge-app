@@ -27,6 +27,7 @@ export default class InputFinishdate extends Component {
   render() {
     return (
       <StyleInputDate
+        data-cy="InputFinishdate"
         type="date"
         onChange={event => this.handleChangeDate(event)}
       />

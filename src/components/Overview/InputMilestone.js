@@ -29,6 +29,7 @@ export default class InputMilestone extends Component {
   render() {
     return (
       <StyleInputMilestone
+        data-cy="InputMilestone"
         onKeyUp={event => this.handleMilestones(event)}
         placeholder="Add your milestone..."
       />

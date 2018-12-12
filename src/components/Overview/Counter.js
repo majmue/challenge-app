@@ -20,7 +20,7 @@ export default class Counter extends Component {
     const { challengeDate } = this.props
 
     return (
-      <StyleCounter>
+      <StyleCounter data-cy="Counter">
         <strong>Due: {moment(challengeDate).fromNow()}</strong>
       </StyleCounter>
     )

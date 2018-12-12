@@ -59,6 +59,7 @@ export default class ContainerImages extends Component {
               className={
                 this.props.selectedImage === img.path ? 'img selected' : 'img'
               }
+              data-cy="InputImage"
               onClick={() => this.props.onClick(img.path)}
               src={img.path}
               alt={img.altText}

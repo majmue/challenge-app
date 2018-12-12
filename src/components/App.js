@@ -136,11 +136,20 @@ export default class App extends Component {
               />
             )}
           />
-          <StyleNavLink>
-            <NavLink exact activeClassName="active" to="/">
+          <StyleNavLink data-cy="Navigation">
+            <NavLink
+              data-cy="SetupScreen"
+              exact
+              activeClassName="active"
+              to="/"
+            >
               <FontAwesomeIcon icon="edit" />
             </NavLink>
-            <NavLink activeClassName="active" to="/overviewscreen">
+            <NavLink
+              data-cy="OverviewScreen"
+              activeClassName="active"
+              to="/overviewscreen"
+            >
               <FontAwesomeIcon icon="hourglass-half" />
             </NavLink>
           </StyleNavLink>
