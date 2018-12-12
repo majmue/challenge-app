@@ -16,6 +16,7 @@ const StyleContainer = styled.section`
   background-color: white;
   opacity: 0.9;
   border-radius: 10px;
+  margin-top: 10px;
 `
 
 const Headline = styled.h1`

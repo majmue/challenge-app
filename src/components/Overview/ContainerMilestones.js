@@ -16,6 +16,7 @@ const StyleContainterMilestones = styled.section`
   opacity: 0.9;
   border-radius: 10px;
   border-width: 0.5px;
+  margin: 10px 0;
 `
 
 export default class ContainerMilestones extends Component {

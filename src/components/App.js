@@ -26,7 +26,7 @@ const Logo = styled.img`
 
 const Wrapper = styled.main`
   display: grid;
-  grid-template-rows: 100px auto 50px;
+  grid-template-rows: 100px auto 55px;
   height: 100vh;
   background: linear-gradient(
     to bottom,

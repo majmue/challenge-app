@@ -22,7 +22,7 @@ const Background = styled.img`
   left: 0;
   object-fit: cover;
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 `
 
